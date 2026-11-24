@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipMate: turn streams into Shorts. Free app, paid kit.</title>
+<meta name="description" content="ClipMate is a free Windows app that turns streams into vertical Shorts. Get the step-by-step kit: a complete guide, cheat sheet, hook templates and a 30-day plan.">
+<meta name="theme-color" content="#0f0d0c">
+<style>
+:root{--bg:#0f0d0c;--card:#1a1613;--line:#322a25;--ink:#f3ece5;--muted:#a99d93;--brand:#ff6a3d;--brand2:#ff8a63;--good:#4fd08e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif}
+a{color:var(--brand2)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.02em}.logo b{color:var(--brand)}
+nav a.btn{font-size:14px}
+.btn{display:inline-block;background:var(--brand);color:#fff;font:inherit;font-weight:700;padding:11px 20px;border-radius:12px;text-decoration:none;border:0;cursor:pointer}
+.btn.ghost{background:transparent;border:2px solid var(--line);color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;padding:36px 0 64px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--muted)}.eyebrow i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--brand);margin-right:8px}
+h1{font-size:clamp(36px,5vw,56px);line-height:1.05;margin:14px 0 16px;letter-spacing:-.03em}h1 span{color:var(--brand)}
+.lead{color:var(--muted);font-size:18px;max-width:520px}
+.compare{margin-top:28px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+.compare div{display:grid;grid-template-columns:1fr 70px 90px;padding:13px 18px;border-top:1px solid var(--line);align-items:center;font-size:15px}
+.compare div:first-child{border-top:0;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em}
+.compare .y{color:var(--good);font-weight:800}.compare .n{color:#5d534b}.compare div>:nth-child(n+2){text-align:center}
+.free-link{margin-top:16px;font-size:14px;color:var(--muted)}
+.buy{background:var(--card);border:2px solid var(--brand);border-radius:24px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.45);position:sticky;top:20px}
+.price{font-size:54px;font-weight:800;letter-spacing:-.03em;line-height:1}.price small{font-size:14px;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:8px}
+.buy ul{list-style:none;padding:0;margin:18px 0}.buy li{padding:4px 0 4px 26px;position:relative}.buy li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
+.buy li em{color:var(--good);font-style:normal;font-weight:700}
+.row{display:grid;grid-template-columns:1.4fr 1fr;gap:10px}
+label.f{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--muted);margin-bottom:5px}
+input{width:100%;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:#120f0d;color:var(--ink);font:inherit}
+input:focus{outline:none;border-color:var(--brand)}
+.fine{font-size:12px;color:var(--muted);margin:8px 0 14px}
+.buy .btn{width:100%;padding:15px;font-size:17px}
+.buy .btn:disabled{opacity:.6;cursor:wait}
+.err{color:#ff8a82;font-size:14px;min-height:20px;margin-top:8px}
+.sub{text-align:center;font-size:13px;color:var(--muted);margin-top:10px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:32px;letter-spacing:-.02em;margin:0 0 8px}.sec-lead{color:var(--muted);margin:0 0 28px;max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.tile b{display:block;font-size:13px;color:var(--brand);letter-spacing:.08em;margin-bottom:6px}.tile h3{margin:0 0 6px;font-size:18px}.tile p{margin:0;color:var(--muted);font-size:15px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}details p{color:var(--muted);margin:10px 0 0}
+dialog{background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:20px;padding:24px;max-width:420px;width:92%}
+dialog::backdrop{background:rgba(0,0,0,.65)}
+footer{padding:36px 0 60px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.buy{position:static}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><div class="logo">Clip<b>Mate</b></div><a class="btn ghost" href="#buy">Get the kit</a></nav>
+
+<div class="hero">
+  <div>
+    <div class="eyebrow"><i></i>FREE APP · PAID KIT</div>
+    <h1>Use the app free.<br><span>Skip the guesswork.</span></h1>
+    <p class="lead">ClipMate finds the hype moments in any stream and cuts them into vertical Shorts with captions, on your own Windows PC. The app costs nothing. The kit is for people who want every step shown.</p>
+    <div class="compare" aria-label="Free versus kit">
+      <div><span></span><span>FREE</span><span>KIT ₹349</span></div>
+      <div><span>ClipMate app (open source)</span><span class="y">✓</span><span class="y">✓</span></div>
+      <div><span>Complete step-by-step guide (PDF)</span><span class="n">–</span><span class="y">✓</span></div>
+      <div><span>Auto-posting setup with Zernio</span><span class="n">–</span><span class="y">✓</span></div>
+      <div><span>Cheat sheet, 30 hook templates, 30-day plan</span><span class="n">–</span><span class="y">✓</span></div>
+      <div><span>Email support</span><span class="n">–</span><span class="y">✓</span></div>
+    </div>
+    <p class="free-link">Free version: <a href="https://github.com/Akshit-Ramola/GTA_CLIPPER" target="_blank" rel="noopener">github.com/Akshit-Ramola/GTA_CLIPPER</a></p>
+  </div>
+
+  <aside class="buy" id="buy">
+    <div class="price">₹349<small>one-time · ClipMate Kit</small></div>
+    <ul>
+      <li>Complete Guide PDF</li>
+      <li>Cheat sheet, 30 hook templates, 30-day plan</li>
+      <li>Email support</li>
+      <li>ClipMate app <em>(free)</em></li>
+    </ul>
+    <form id="form" novalidate>
+      <div class="row">
+        <div><label class="f" for="email">EMAIL</label><input id="email" type="email" autocomplete="email" placeholder="you@gmail.com" required></div>
+        <div><label class="f" for="phone">PHONE (OPTIONAL)</label><input id="phone" type="tel" autocomplete="tel" placeholder="98xxxxxxxx"></div>
+      </div>
+      <p class="fine">Used only to send your download link and to find your purchase if you lose it.</p>
+      <button class="btn" id="pay" type="submit">Get the kit · ₹349 →</button>
+      <div class="err" id="err" role="alert"></div>
+    </form>
+    <p class="sub">Secure Razorpay checkout. Your private download page opens right after payment.<br>UPI, cards, netbanking.</p>
+    <p class="sub"><a href="#" id="recover">Already paid? Get your download link</a><br>Help: <a id="mail" href="#"></a></p>
+  </aside>
+</div>
+</div>
+
+<section><div class="wrap">
+  <h2>What's in the kit</h2>
+  <p class="sec-lead">Written for beginners. Follow it top to bottom and you go from install to your first posted Short in an afternoon.</p>
+  <div class="grid">
+    <div class="tile"><b>GUIDE</b><h3>Install and first clip</h3><p>Installer or from source, the Windows warning, FFmpeg, and your first clip from a real stream.</p></div>
+    <div class="tile"><b>GUIDE</b><h3>Design that holds attention</h3><p>Templates, cam placement, caption styles and sizes, titles, and the settings that matter.</p></div>
+    <div class="tile"><b>GUIDE</b><h3>Live and long streams</h3><p>Live clipping, long VODs without downloading everything, and quality settings.</p></div>
+    <div class="tile"><b>SETUP</b><h3>Auto-post walkthrough</h3><p>Connect Zernio, link Instagram and YouTube, set clips per hour, and handle platform limits.</p></div>
+    <div class="tile"><b>SETUP</b><h3>Optional AI boost</h3><p>Free and local options for better picks and titles, and when you don't need them.</p></div>
+    <div class="tile"><b>BONUS</b><h3>Cheat sheet and plan</h3><p>One-page cheat sheet, 30 hook templates and a 30-day posting plan.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Questions</h2><p class="sec-lead"></p>
+  <details><summary>Is the app really free?</summary><p>Yes. The app is open source on GitHub and you can use it with no payment. You only pay if you want the guide and setup help.</p></details>
+  <details><summary>How do I get the guide after paying?</summary><p>Your private download page opens as soon as payment succeeds. If you lose it, use "Already paid?" with your email and Razorpay payment ID (it starts with pay_ and is on your receipt).</p></details>
+  <details><summary>Does it work on Mac or Linux?</summary><p>The installer and guide are for Windows 10/11.</p></details>
+  <details><summary>Windows says "protected your PC".</summary><p>The installer is unsigned. The guide shows exactly what to click, and it only takes a few seconds.</p></details>
+  <details><summary>Refunds?</summary><p>This is a digital download. If the file doesn't work for you, email us and we'll fix it or refund you.</p></details>
+</div></section>
+
+<footer><div class="wrap">ClipMate is built on the open-source <a href="https://github.com/AnIntellectualBeing/MasterClip" target="_blank" rel="noopener">MasterClip</a> project (MIT licence). The guide and kit are original work sold separately. ClipMate is not affiliated with the original authors.</div></footer>
+
+<dialog id="dlg">
+  <h3 style="margin-top:0">Get your download link</h3>
+  <p class="fine">Enter the email you paid with and the payment ID from your Razorpay receipt (starts with pay_).</p>
+  <label class="f" for="re">EMAIL</label><input id="re" type="email"><div style="height:10px"></div>
+  <label class="f" for="rp">PAYMENT ID</label><input id="rp" placeholder="pay_XXXXXXXXXXXXXX">
+  <div class="err" id="rerr" role="alert"></div>
+  <div style="display:flex;gap:10px;margin-top:6px"><button class="btn" id="rgo" style="flex:1">Get link</button><button class="btn ghost" id="rx">Cancel</button></div>
+</dialog>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+const SUPPORT_EMAIL = "you@example.com"; // TODO: replace with your support email
+document.getElementById("mail").textContent = SUPPORT_EMAIL;
+document.getElementById("mail").href = "mailto:" + SUPPORT_EMAIL;
+const $ = (id) => document.getElementById(id);
+const post = (url, body) => fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) })
+  .then(async (r) => { const d = await r.json().catch(() => ({})); if (!r.ok) throw new Error(d.error || "Something went wrong."); return d; });
+
+$("form").addEventListener("submit", async (e) => {
+  e.preventDefault(); $("err").textContent = "";
+  const email = $("email").value.trim(), phone = $("phone").value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { $("err").textContent = "Enter a valid email."; return; }
+  $("pay").disabled = true;
+  try {
+    const o = await post("/api/create-order", { email, phone });
+    const rz = new Razorpay({
+      key: o.keyId, order_id: o.orderId, amount: o.amount, currency: "INR",
+      name: "ClipMate", description: "ClipMate Kit", prefill: { email, contact: phone },
+      theme: { color: "#ff6a3d" },
+      handler: async (resp) => {
+        try { const v = await post("/api/verify", { ...resp, email }); location.href = v.link; }
+        catch (err) { $("err").textContent = err.message + " Your payment ID: " + resp.razorpay_payment_id; $("pay").disabled = false; }
+      },
+      modal: { ondismiss: () => { $("pay").disabled = false; } },
+    });
+    rz.open();
+  } catch (err) { $("err").textContent = err.message; $("pay").disabled = false; }
+});
+
+$("recover").addEventListener("click", (e) => { e.preventDefault(); $("dlg").showModal(); });
+$("rx").addEventListener("click", () => $("dlg").close());
+$("rgo").addEventListener("click", async () => {
+  $("rerr").textContent = "";
+  try { const d = await post("/api/recover", { email: $("re").value.trim(), paymentId: $("rp").value.trim() }); location.href = d.link; }
+  catch (err) { $("rerr").textContent = err.message; }
+});
+</script>
+</body>
+</html>
