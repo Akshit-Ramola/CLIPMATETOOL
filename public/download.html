@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your ClipMate Kit</title><meta name="robots" content="noindex">
-<style>body{margin:0;background:#0f0d0c;color:#f3ece5;font:16px/1.6 "Segoe UI",system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;padding:20px}
-.c{max-width:520px;background:#1a1613;border:2px solid #ff6a3d;border-radius:24px;padding:32px}h1{margin-top:0}a.b{display:block;text-align:center;background:#ff6a3d;color:#fff;font-weight:700;padding:15px;border-radius:12px;text-decoration:none;margin:18px 0}
-p{color:#a99d93}a{color:#ff8a63}</style></head>
-<body><div class="c"><h1>Thank you! 🎉</h1>
-<p>Your payment is confirmed. Download your kit below. Bookmark this page, because the link is yours for good.</p>
-<a class="b" id="dl" href="#">Download the ClipMate Guide (PDF)</a>
-<p>Get the free app: <a href="https://github.com/Akshit-Ramola/GTA_CLIPPER" target="_blank" rel="noopener">github.com/Akshit-Ramola/GTA_CLIPPER</a></p>
-<p>Please don't share this link. Lost it? Use "Already paid?" on the main page.</p></div>
-<script>const t=new URLSearchParams(location.search).get("t");document.getElementById("dl").href="/api/guide?t="+encodeURIComponent(t||"");</script>
+<title>My ClipMate downloads</title><meta name="robots" content="noindex">
+<style>
+:root{--bg:#0f0d0c;--card:#1a1613;--line:#322a25;--ink:#f3ece5;--muted:#a99d93;--brand:#ff6a3d;--brand2:#ff8a63;--good:#4fd08e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,sans-serif;padding:32px 20px}
+.w{max-width:760px;margin:0 auto}.logo{font-weight:800;font-size:20px}.logo b{color:var(--brand)}
+h1{font-size:32px;letter-spacing:-.02em;margin:18px 0 6px}.ok{color:var(--good);font-weight:700}
+p{color:var(--muted)}a{color:var(--brand2)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.card.main{border-color:var(--brand)}.card h2{margin:0;font-size:20px}.card p{margin:0;font-size:14px;flex:1}
+.tag{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--brand)}
+a.b{display:block;text-align:center;background:var(--brand);color:#fff;font-weight:700;padding:13px;border-radius:12px;text-decoration:none;margin-top:8px}
+a.b.alt{background:transparent;border:2px solid var(--line);color:var(--ink)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-top:16px}.box h3{margin:0 0 6px}.box ol{margin:6px 0 0;padding-left:20px;color:var(--muted)}
+.small{font-size:13px;color:var(--muted)}
+@media(max-width:640px){.cards{grid-template-columns:1fr}}
+</style></head>
+<body><div class="w">
+<div class="logo">Clip<b>Mate</b></div>
+<h1>My ClipMate downloads <span class="small">(guide + installer)</span></h1>
+<p><span class="ok">✓ Payment confirmed.</span> <span id="ord"></span> Thank you! Bookmark this page, because this link is yours for good.</p>
+
+<div class="cards">
+  <div class="card main"><span class="tag">YOUR KIT</span><h2>ClipMate Guide (PDF)</h2>
+    <p>Step-by-step guide, auto-post setup, cheat sheet, 30 hook templates and the 30-day plan.</p>
+    <a class="b" id="dl" href="#">Download the guide</a></div>
+  <div class="card"><span class="tag">FREE APP</span><h2>ClipMate installer (Windows)</h2>
+    <p>The app is free and open source. Download the latest Windows installer from GitHub Releases.</p>
+    <a class="b alt" id="inst" href="https://github.com/Akshit-Ramola/GTA_CLIPPER/releases/latest" target="_blank" rel="noopener">Get the installer</a></div>
+</div>
+
+<div class="box"><h3>Quick start</h3><ol>
+<li>Download and run the installer, then open ClipMate from the Start menu.</li>
+<li>Windows says "protected your PC"? Click <b>More info</b>, then <b>Run anyway</b>. The installer is unsigned.</li>
+<li>Open the guide and follow it from chapter 2.</li></ol></div>
+
+<div class="box"><h3>Prefer to run from source?</h3>
+<p style="margin:0">Code and instructions: <a href="https://github.com/Akshit-Ramola/GTA_CLIPPER" target="_blank" rel="noopener">github.com/Akshit-Ramola/GTA_CLIPPER</a></p></div>
+
+<p class="small" style="margin-top:22px">Please don't share this link. Lost it? Use "Already paid?" on the main page with your email and Razorpay payment ID. Questions: <a id="mail" href="#"></a></p>
+</div>
+<script>
+const SUPPORT_EMAIL = "you@example.com"; // TODO: replace with your support email
+document.getElementById("mail").textContent = SUPPORT_EMAIL; document.getElementById("mail").href = "mailto:" + SUPPORT_EMAIL;
+const t = new URLSearchParams(location.search).get("t") || "";
+document.getElementById("dl").href = "/api/guide?t=" + encodeURIComponent(t);
+try { const o = JSON.parse(atob(t.split(".")[0].replace(/-/g, "+").replace(/_/g, "/"))).o; if (/^order_\w+$/.test(o)) document.getElementById("ord").textContent = "Order " + o + "."; } catch (e) {}
+</script>
 </body></html>
