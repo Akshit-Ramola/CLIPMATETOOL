@@ -7,7 +7,7 @@
 <meta name="description" content="ClipMate is a free Windows app that turns streams into vertical Shorts. Get the step-by-step kit: a complete guide, cheat sheet, hook templates and a 30-day plan.">
 <meta name="theme-color" content="#0f0d0c">
 <style>
-:root{--bg:#0f0d0c;--card:#1a1613;--line:#322a25;--ink:#f3ece5;--muted:#a99d93;--brand:#ff6a3d;--brand2:#ff8a63;--good:#4fd08e}
+:root{--bg:#0f0d0c;--card:#1a1613;--line:#322a25;--ink:#f3ece5;--muted:#a99d93;--brand:#ff6a1f;--brand2:#ff9a55;--good:#4fd08e}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif}
 a{color:var(--brand2)}
@@ -80,6 +80,31 @@ section.alt{background:#161210}
 .window img{display:block;width:100%;height:auto}
 @media(max-width:860px){.duo,.step,.step:nth-of-type(odd){grid-template-columns:1fr}.step{gap:20px}.step:nth-of-type(odd)>div:first-child{order:0}.minis{grid-template-columns:1fr 1fr}.pages{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.guide-row{grid-template-columns:1fr}.cover-img{width:150px}.minis{grid-template-columns:1fr}}
+
+/* glossy orange */
+:root{--brand:#ff6a1f;--brand2:#ff9a55;--gloss:linear-gradient(180deg,#ffb070 0%,#ff8434 46%,#ff6a12 54%,#ee5200 100%)}
+.btn:not(.ghost),a.b:not(.alt){position:relative;overflow:hidden;isolation:isolate;background:var(--gloss);border:0;text-shadow:0 1px 2px rgba(120,40,0,.45);
+box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -2px 4px rgba(140,45,0,.35),0 8px 22px rgba(255,106,31,.35);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
+.btn:not(.ghost)::after,a.b:not(.alt)::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s ease;pointer-events:none}
+.btn:not(.ghost):hover:not(:disabled),a.b:not(.alt):hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:inset 0 1px 0 rgba(255,255,255,.65),inset 0 -2px 4px rgba(140,45,0,.35),0 12px 30px rgba(255,106,31,.5)}
+.btn:not(.ghost):hover:not(:disabled)::after,a.b:not(.alt):hover::after{left:120%}
+.btn:not(.ghost):active:not(:disabled),a.b:not(.alt):active{transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto!important}}
+h1 span,h2.big span{background:linear-gradient(100deg,#ff6a12 0%,#ffb070 30%,#ff7a22 55%,#ee5200 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 7s ease-in-out infinite}
+@keyframes sheen{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+.announce a,.links a,.paid,a{transition:color .2s ease,transform .2s ease}.announce a:hover{transform:translateY(-1px)}
+.links a{position:relative}.links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:2px;background:var(--gloss);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}.links a:hover::after{transform:scaleX(1)}
+.eyebrow i{animation:pulse 2.2s ease-out infinite}@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,106,31,.6)}80%,100%{box-shadow:0 0 0 10px rgba(255,106,31,0)}}
+.num{display:inline-block}.checks li::before,.buy li::before{color:var(--brand2)}
+.buy{box-shadow:0 20px 60px rgba(0,0,0,.45),0 0 44px rgba(255,106,31,.18);background:linear-gradient(180deg,rgba(255,140,70,.09),transparent 34%),var(--card)}
+.card,.tile,.window,.pages img,details,.compare{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.card:hover,.tile:hover,.window:hover{transform:translateY(-4px);border-color:rgba(255,122,40,.55);box-shadow:0 18px 44px rgba(0,0,0,.45),0 0 28px rgba(255,106,31,.16)}
+.pages img:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 20px 40px rgba(0,0,0,.5),0 0 26px rgba(255,106,31,.3)}
+details:hover{border-color:rgba(255,122,40,.45)}details[open] p{animation:drop .35s ease}@keyframes drop{from{opacity:0;transform:translateY(-6px)}}
+input{transition:border-color .2s ease,box-shadow .2s ease}input:focus{box-shadow:0 0 0 4px rgba(255,106,31,.18)}
+dialog[open]{animation:pop .3s ease}@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.97)}}
+.js .reveal{opacity:0;translate:0 28px;transition:opacity .7s ease var(--d,0s),translate .7s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.js .reveal.in{opacity:1;translate:0 0}
 </style>
 </head>
 <body>
@@ -87,7 +112,7 @@ section.alt{background:#161210}
   <a href="https://github.com/Akshit-Ramola/GTA_CLIPPER" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Get it free on GitHub</a>
 </div>
 <header><div class="wrap"><nav aria-label="Main">
-  <a class="logo" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#ff6a3d"/><path d="M12 9.5v13l11-6.5z" fill="#fff"/></svg><span>Clip<b>Mate</b></span></a>
+  <a class="logo" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#ff6a1f"/><path d="M12 9.5v13l11-6.5z" fill="#fff"/></svg><span>Clip<b>Mate</b></span></a>
   <div class="links"><a href="#guide">The kit</a><a href="#inside">Inside the guide</a><a href="#how">How it works</a><a href="#faq">FAQ</a></div>
   <div class="actions"><button type="button" class="paid" id="paidTop">Already paid?</button><a class="btn" href="#buy">Get the kit · ₹149</a></div>
 </nav></div></header>
@@ -228,7 +253,7 @@ $("form").addEventListener("submit", async (e) => {
     const rz = new Razorpay({
       key: o.keyId, order_id: o.orderId, amount: o.amount, currency: "INR",
       name: "ClipMate", description: "ClipMate Kit", prefill: { email, contact: phone },
-      theme: { color: "#ff6a3d" },
+      theme: { color: "#ff6a1f" },
       handler: async (resp) => {
         try { const v = await post("/api/verify", { ...resp, email }); location.href = v.link; }
         catch (err) { $("err").textContent = err.message + " Your payment ID: " + resp.razorpay_payment_id; $("pay").disabled = false; }
@@ -247,6 +272,21 @@ $("rgo").addEventListener("click", async () => {
   try { const d = await post("/api/recover", { email: $("re").value.trim(), paymentId: $("rp").value.trim() }); location.href = d.link; }
   catch (err) { $("rerr").textContent = err.message; }
 });
+</script>
+<script>
+// Fade sections in as they scroll into view. Without JavaScript everything is simply visible.
+if ("IntersectionObserver" in window) {
+  document.documentElement.classList.add("js");
+  const seen = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add("in"); seen.unobserve(e.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll("section .eyebrow, h2, .sec-lead, .card, .tile, .pages figure, .step, details, .compare, .free-link, .hero h1, .lead, .buy").forEach((el) => {
+    el.classList.add("reveal");
+    const i = [...el.parentElement.children].indexOf(el);
+    el.style.setProperty("--d", (el.matches(".tile, .pages figure, .card, details") ? Math.min(i, 5) * 0.08 : 0) + "s");
+    seen.observe(el);
+  });
+}
 </script>
 </body>
 </html>
