@@ -1,0 +1,4 @@
+# What Vercel should NOT upload. private/ must be uploaded: it holds the guide PDF.
+.env
+.env*.local
+guide-src/
