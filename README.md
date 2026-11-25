@@ -25,5 +25,5 @@ Deploy with the CLI from your machine so `private/ClipMate-Guide.pdf` is uploade
 Use Razorpay test keys and a test card or UPI from Razorpay's docs. After a test payment you should land on `download.html` and get the PDF. Then switch to live keys.
 
 ## Notes
-- The price is `PRICE_PAISE` (default 34900). The page text says Rs 349, so change both together.
+- The price is `PRICE_PAISE` (default 14900). The page text says Rs 149, so change both together.
 - Anyone with a download link can download the guide. Links don't expire. Don't publish them.

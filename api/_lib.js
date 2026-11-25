@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 
-const PRICE = parseInt(process.env.PRICE_PAISE || "34900", 10);
+const PRICE = parseInt(process.env.PRICE_PAISE || "14900", 10);
 const b64 = (b) => Buffer.from(b).toString("base64url");
 
 function need(name) {
