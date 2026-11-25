@@ -25,7 +25,7 @@ section,#buy{scroll-margin-top:80px}
 nav a.btn{font-size:14px}
 .btn{display:inline-block;background:var(--brand);color:#fff;font:inherit;font-weight:700;padding:11px 20px;border-radius:12px;text-decoration:none;border:0;cursor:pointer}
 .btn.ghost{background:transparent;border:2px solid var(--line);color:var(--ink)}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;padding:36px 0 64px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;}
 .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--muted)}.eyebrow i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--brand);margin-right:8px}
 h1{font-size:clamp(36px,5vw,56px);line-height:1.05;margin:14px 0 16px;letter-spacing:-.03em}h1 span{color:var(--brand)}
 .lead{color:var(--muted);font-size:18px;max-width:520px}
@@ -91,47 +91,6 @@ section.alt{background:#161210}
   <div class="links"><a href="#guide">The kit</a><a href="#inside">Inside the guide</a><a href="#how">How it works</a><a href="#faq">FAQ</a></div>
   <div class="actions"><button type="button" class="paid" id="paidTop">Already paid?</button><a class="btn" href="#buy">Get the kit · ₹149</a></div>
 </nav></div></header>
-
-<div class="wrap">
-
-<div class="hero">
-  <div>
-    <div class="eyebrow"><i></i>FREE APP · PAID KIT</div>
-    <h1>Use the app free.<br><span>Skip the guesswork.</span></h1>
-    <p class="lead">ClipMate finds the hype moments in any stream and cuts them into vertical Shorts with captions, on your own Windows PC. The app costs nothing. The kit is for people who want every step shown.</p>
-    <div class="compare" aria-label="Free versus kit">
-      <div><span></span><span>FREE</span><span>KIT ₹149</span></div>
-      <div><span>ClipMate app (open source)</span><span class="y">✓</span><span class="y">✓</span></div>
-      <div><span>Complete step-by-step guide (PDF)</span><span class="n">–</span><span class="y">✓</span></div>
-      <div><span>Auto-posting setup with Zernio</span><span class="n">–</span><span class="y">✓</span></div>
-      <div><span>Cheat sheet, 30 hook templates, 30-day plan</span><span class="n">–</span><span class="y">✓</span></div>
-      <div><span>Email support</span><span class="n">–</span><span class="y">✓</span></div>
-    </div>
-    <p class="free-link">Free version: <a href="https://github.com/Akshit-Ramola/GTA_CLIPPER" target="_blank" rel="noopener">github.com/Akshit-Ramola/GTA_CLIPPER</a></p>
-  </div>
-
-  <aside class="buy" id="buy">
-    <div class="price">₹149<small>one-time · ClipMate Kit</small></div>
-    <ul>
-      <li>Complete Guide PDF</li>
-      <li>Cheat sheet, 30 hook templates, 30-day plan</li>
-      <li>Email support</li>
-      <li>ClipMate app <em>(free)</em></li>
-    </ul>
-    <form id="form" novalidate>
-      <div class="row">
-        <div><label class="f" for="email">EMAIL</label><input id="email" type="email" autocomplete="email" placeholder="you@gmail.com" required></div>
-        <div><label class="f" for="phone">PHONE (OPTIONAL)</label><input id="phone" type="tel" autocomplete="tel" placeholder="98xxxxxxxx"></div>
-      </div>
-      <p class="fine">Used only to send your download link and to find your purchase if you lose it.</p>
-      <button class="btn" id="pay" type="submit">Get the kit · ₹149 →</button>
-      <div class="err" id="err" role="alert"></div>
-    </form>
-    <p class="sub">Secure Razorpay checkout. Your private download page opens right after payment.<br>UPI, cards, netbanking.</p>
-    <p class="sub"><a href="#" id="recover">Already paid? Get your download link</a><br>Help: <a id="mail" href="#"></a></p>
-  </aside>
-</div>
-</div>
 
 <section id="guide"><div class="wrap">
   <div class="eyebrow"><i></i>WHAT ₹149 GETS YOU</div>
@@ -201,6 +160,45 @@ section.alt{background:#161210}
   <details><summary>Refunds?</summary><p>This is a digital download. If the file doesn't work for you, email us and we'll fix it or refund you.</p></details>
 </div></section>
 
+<section id="pricing"><div class="wrap">
+<div class="hero">
+  <div>
+    <div class="eyebrow"><i></i>FREE APP · PAID KIT</div>
+    <h1>Use the app free.<br><span>Skip the guesswork.</span></h1>
+    <p class="lead">ClipMate finds the hype moments in any stream and cuts them into vertical Shorts with captions, on your own Windows PC. The app costs nothing. The kit is for people who want every step shown.</p>
+    <div class="compare" aria-label="Free versus kit">
+      <div><span></span><span>FREE</span><span>KIT ₹149</span></div>
+      <div><span>ClipMate app (open source)</span><span class="y">✓</span><span class="y">✓</span></div>
+      <div><span>Complete step-by-step guide (PDF)</span><span class="n">–</span><span class="y">✓</span></div>
+      <div><span>Auto-posting setup with Zernio</span><span class="n">–</span><span class="y">✓</span></div>
+      <div><span>Cheat sheet, 30 hook templates, 30-day plan</span><span class="n">–</span><span class="y">✓</span></div>
+      <div><span>Email support</span><span class="n">–</span><span class="y">✓</span></div>
+    </div>
+    <p class="free-link">Free version: <a href="https://github.com/Akshit-Ramola/GTA_CLIPPER" target="_blank" rel="noopener">github.com/Akshit-Ramola/GTA_CLIPPER</a></p>
+  </div>
+
+  <aside class="buy" id="buy">
+    <div class="price">₹149<small>one-time · ClipMate Kit</small></div>
+    <ul>
+      <li>Complete Guide PDF</li>
+      <li>Cheat sheet, 30 hook templates, 30-day plan</li>
+      <li>Email support</li>
+      <li>ClipMate app <em>(free)</em></li>
+    </ul>
+    <form id="form" novalidate>
+      <div class="row">
+        <div><label class="f" for="email">EMAIL</label><input id="email" type="email" autocomplete="email" placeholder="you@gmail.com" required></div>
+        <div><label class="f" for="phone">PHONE (OPTIONAL)</label><input id="phone" type="tel" autocomplete="tel" placeholder="98xxxxxxxx"></div>
+      </div>
+      <p class="fine">Used only to send your download link and to find your purchase if you lose it.</p>
+      <button class="btn" id="pay" type="submit">Get the kit · ₹149 →</button>
+      <div class="err" id="err" role="alert"></div>
+    </form>
+    <p class="sub">Secure Razorpay checkout. Your private download page opens right after payment.<br>UPI, cards, netbanking.</p>
+    <p class="sub"><a href="#" id="recover">Already paid? Get your download link</a><br>Help: <a id="mail" href="#"></a></p>
+  </aside>
+</div>
+</div></section>
 
 <dialog id="dlg">
   <h3 style="margin-top:0">Get your download link</h3>
