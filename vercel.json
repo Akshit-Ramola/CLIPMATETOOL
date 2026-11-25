@@ -1,4 +1,5 @@
 {
+  "framework": null,
   "functions": { "api/guide.js": { "includeFiles": "private/**" } },
   "headers": [
     { "source": "/api/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },

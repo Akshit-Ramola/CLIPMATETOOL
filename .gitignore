@@ -3,3 +3,6 @@
 node_modules
 private/
 guide-src/
+
+.vercel
+.env*.local
