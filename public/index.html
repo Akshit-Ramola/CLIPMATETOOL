@@ -12,8 +12,17 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif}
 a{color:var(--brand2)}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
-.logo{font-weight:800;font-size:20px;letter-spacing:-.02em}.logo b{color:var(--brand)}
+.announce{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;padding:9px 16px;background:#f3ece5;color:#1c1714;font-size:14px;text-align:center}
+.announce a{display:inline-flex;align-items:center;gap:8px;background:#0f0d0c;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:5px 14px;border-radius:999px}
+.announce svg{width:16px;height:16px;fill:currentColor}
+header{position:sticky;top:0;z-index:10;background:rgba(15,13,12,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:13px 0}
+.links{display:flex;gap:28px}.links a,.paid{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;background:none;border:0;padding:0;cursor:pointer;font-family:inherit}
+.links a:hover,.paid:hover{color:var(--ink)}
+.actions{display:flex;align-items:center;gap:16px}
+section,#buy{scroll-margin-top:80px}
+.steps{counter-reset:s}.steps .tile::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;margin-bottom:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}.logo svg{width:30px;height:30px}.logo b{color:var(--brand)}
 nav a.btn{font-size:14px}
 .btn{display:inline-block;background:var(--brand);color:#fff;font:inherit;font-weight:700;padding:11px 20px;border-radius:12px;text-decoration:none;border:0;cursor:pointer}
 .btn.ghost{background:transparent;border:2px solid var(--line);color:var(--ink)}
@@ -26,7 +35,7 @@ h1{font-size:clamp(36px,5vw,56px);line-height:1.05;margin:14px 0 16px;letter-spa
 .compare div:first-child{border-top:0;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em}
 .compare .y{color:var(--good);font-weight:800}.compare .n{color:#5d534b}.compare div>:nth-child(n+2){text-align:center}
 .free-link{margin-top:16px;font-size:14px;color:var(--muted)}
-.buy{background:var(--card);border:2px solid var(--brand);border-radius:24px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.45);position:sticky;top:20px}
+.buy{background:var(--card);border:2px solid var(--brand);border-radius:24px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.45);position:sticky;top:84px}
 .price{font-size:54px;font-weight:800;letter-spacing:-.03em;line-height:1}.price small{font-size:14px;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:8px}
 .buy ul{list-style:none;padding:0;margin:18px 0}.buy li{padding:4px 0 4px 26px;position:relative}.buy li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
 .buy li em{color:var(--good);font-style:normal;font-weight:700}
@@ -48,12 +57,21 @@ details{background:var(--card);border:1px solid var(--line);border-radius:14px;p
 summary{cursor:pointer;font-weight:700}details p{color:var(--muted);margin:10px 0 0}
 dialog{background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:20px;padding:24px;max-width:420px;width:92%}
 dialog::backdrop{background:rgba(0,0,0,.65)}
-@media(max-width:860px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.buy{position:static}}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.buy{position:static}.links{display:none}}
+@media(max-width:480px){.paid{display:none}}
 </style>
 </head>
 <body>
+<div class="announce">The ClipMate app is free and open source.
+  <a href="https://github.com/Akshit-Ramola/GTA_CLIPPER" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Get it free on GitHub</a>
+</div>
+<header><div class="wrap"><nav aria-label="Main">
+  <a class="logo" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#ff6a3d"/><path d="M12 9.5v13l11-6.5z" fill="#fff"/></svg><span>Clip<b>Mate</b></span></a>
+  <div class="links"><a href="#buy">The kit</a><a href="#guide">Inside the guide</a><a href="#how">How it works</a><a href="#faq">FAQ</a></div>
+  <div class="actions"><button type="button" class="paid" id="paidTop">Already paid?</button><a class="btn" href="#buy">Get the kit · ₹149</a></div>
+</nav></div></header>
+
 <div class="wrap">
-<nav><div class="logo">Clip<b>Mate</b></div><a class="btn ghost" href="#buy">Get the kit</a></nav>
 
 <div class="hero">
   <div>
@@ -94,8 +112,8 @@ dialog::backdrop{background:rgba(0,0,0,.65)}
 </div>
 </div>
 
-<section><div class="wrap">
-  <h2>What's in the kit</h2>
+<section id="guide"><div class="wrap">
+  <h2>Inside the guide</h2>
   <p class="sec-lead">Written for beginners. Follow it top to bottom and you go from install to your first posted Short in an afternoon.</p>
   <div class="grid">
     <div class="tile"><b>GUIDE</b><h3>Install and first clip</h3><p>Installer or from source, the Windows warning, FFmpeg, and your first clip from a real stream.</p></div>
@@ -107,7 +125,17 @@ dialog::backdrop{background:rgba(0,0,0,.65)}
   </div>
 </div></section>
 
-<section><div class="wrap">
+<section id="how"><div class="wrap">
+  <h2>How it works</h2>
+  <p class="sec-lead">Three steps from here to your kit.</p>
+  <div class="grid steps">
+    <div class="tile"><h3>Pay once</h3><p>Enter your email and pay ₹149 through Razorpay.</p></div>
+    <div class="tile"><h3>Download your kit</h3><p>Your private download page opens right after payment.</p></div>
+    <div class="tile"><h3>Follow the guide</h3><p>Install the free app, make your first clip and set up auto-posting.</p></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
   <h2>Questions</h2><p class="sec-lead"></p>
   <details><summary>Is the app really free?</summary><p>Yes. The app is open source on GitHub and you can use it with no payment. You only pay if you want the guide and setup help.</p></details>
   <details><summary>How do I get the guide after paying?</summary><p>Your private download page opens as soon as payment succeeds. If you lose it, use "Already paid?" with your email and Razorpay payment ID (it starts with pay_ and is on your receipt).</p></details>
@@ -157,6 +185,7 @@ $("form").addEventListener("submit", async (e) => {
 });
 
 $("recover").addEventListener("click", (e) => { e.preventDefault(); $("dlg").showModal(); });
+$("paidTop").addEventListener("click", () => $("dlg").showModal());
 $("rx").addEventListener("click", () => $("dlg").close());
 $("rgo").addEventListener("click", async () => {
   $("rerr").textContent = "";
